@@ -34,11 +34,15 @@
     <header>
       <h2>Site Header</h2>
       <p>Site Title: City of Ottawa Random Data</p>
+      <img
+        src="./images/house.png"
+        alt="Illustrated graphic of a condo tower"
+      />
       <h3>Site Menu</h3>
       <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contact</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </header>
     <main>
@@ -46,14 +50,14 @@
       <section>
       <h2>Table of contents</h2>
       <ul>
-        <li>Housing Construction Summary for Q1 2023</li>
-        <li>Wards</li>
-        <li>Property Taxes</li>
-        <li>Ward Councillor Evaluation Form</li>
+        <li><a href="#housing">Housing Construction Summary for Q1 2023</a></li>
+        <li><a href="#wards">Wards</a></li>
+        <li><a href="#taxes">Property Taxes</a></li>
+        <li><a href="#form">Ward Councillor Evaluation Form</a></li>
       </ul>
     </section>
     <section>
-      <h2>Housing Construction Summary for Q1 2023</h2>
+      <h2 id="housing">Housing Construction Summary for Q1 2023</h2>
       <p>
         In Q1 2023, there were:
         <ul>
@@ -75,12 +79,16 @@
       </p>
     </section>
     <section>
-      <h2>Wards</h2>
+      <h2 id="wards">Wards</h2>
       <p>The City of Ottawa is divided into 24 wards. Each ward has a councillor who represents the residents of that ward.</p>
+      <img
+        src="./images/ottawa-map.png"
+        alt="Image of a map of ottawa"
+      />
     </section>
     <section>
     <section>
-      <h2>Property Taxes</h2>
+      <h2 id="taxes">Property Taxes</h2>
       <p>The City of Ottawa collects property taxes from residents to help pay for services such as roads, parks, and public transit.</p>
     </section>
     <section>
@@ -361,7 +369,7 @@
         />
         <label for="appreciation">Appreciation</label>
 
-        <label for="feedback">Feedback Details</label>
+        <label for="feedback">Feedback Details:</label>
         <br />
         <textarea 
         id="feedback"
@@ -371,9 +379,51 @@
         required>
         </textarea>
         
+        <label for="priority">Priority Level:</label>
+        <select id="priority" name="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <label for="location">Location (if applicable):</label>
+        <input type="text" id="location" name="location">
+
+      </fieldset>
+      <fieldset>
+        <legend>Follow-up Information:</legend>
+        
+        <input type="checkbox" id="followup" name="followup" value="yes"/>
+        <label for="followup">I would like to receive a follow-up response</label>
+
+        <label for="contactmethod">Preferred Contact Method:</label>
+        <select id="contactmethod" name="contactmethod">
+          <option value="email">email</option>
+          <option value="phone">phone</option>
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Submit Feedback:</legend>
+
+        <input type="checkbox" id="consent" name="consent" required />
+        <label for="consent">I consent to the use of my feedback.</label>
+
+        <input type="submit" value="Submit Feedback" />
       </fieldset>
     </form>
     </section>
     </main>
+    <footer>
+      <h2>Site Footer</h2>
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p>© 2023</p>
+    </footer>
   </body>
 </html>
